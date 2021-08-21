@@ -1,0 +1,53 @@
+<h2 class="employee-tab-title">Employee Details </h2>
+<table mat-table [dataSource]="candidate_detials" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="department">
+      <th mat-header-cell *matHeaderCellDef> Department </th>
+      <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="joining_date">
+      <th mat-header-cell *matHeaderCellDef> Joining Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.joining_date}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <div class="no-records-msg" *ngIf="noSearchMatched">
+    <span> {{ 'No record(s) found !' }} </span>
+  </div>
+
+  <button mat-raised-button color="primary" class= "btn-position" (click) = sortByName()> Sort By Name </button>
+
+  <button mat-raised-button color="primary" class= "btn-position" (click) = sortByJoiningDate()> Sort By Joining Date</button>
+
+  <button mat-raised-button color="primary" class= "btn-position" (click) = checkExperience()> 2 + Years Experience</button>
+
+  <mat-form-field class= "btn-position" appearance="outline">
+    <mat-label>Search By Name</mat-label>
+    <input matInput  [(ngModel)]="searchedNamed" placeholder="Search">
+  </mat-form-field>
+  <button mat-raised-button color="primary" class= "btn-position" (click) = searchByName()> Search</button>
+
+  <button mat-raised-button color="primary" class= "btn-position" (click) = restSetData()> Reset</button>
+
+  <button mat-raised-button color="primary" class= "btn-position" [disabled]="isCountBtnClicked" (click) = candidateCountInEachDept()> Count Of Candiated In Unique Departments</button>
+
+  <button mat-raised-button color="primary" class= "btn-position" (click) = removeCandidiated()> Remove Development Candidates</button>
+
+<div class="json-data" *ngIf="isCountBtnClicked" >
+    {{ distinctArr | json}}
+</div>
+ 
