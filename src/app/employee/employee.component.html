@@ -43,7 +43,7 @@
 
   <button mat-raised-button color="primary" class= "btn-position" (click) = restSetData()> Reset</button>
 
-  <button mat-raised-button color="primary" class= "btn-position" [disabled]="isCountBtnClicked" (click) = candidateCountInEachDept()> Count Of Candiated In Unique Departments</button>
+  <button mat-raised-button color="primary" class= "btn-position" [ngClass]="[isCountBtnClicked ? 'btn-disabled' : 'btn-position']"  (click) = candidateCountInEachDept()> Count Of Candiated In Unique Departments</button>
 
   <button mat-raised-button color="primary" class= "btn-position" (click) = removeCandidiated()> Remove Development Candidates</button>
 

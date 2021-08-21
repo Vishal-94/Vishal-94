@@ -80,3 +80,9 @@ table{
 ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
     color: black!important;
 }
+
+.btn-disabled{
+    cursor: not-allowed ;
+    background-color: gray;
+    pointer-events: none;
+}

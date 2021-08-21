@@ -128,6 +128,7 @@ export class EmployeeComponent implements OnInit {
   }
   
   restSetData(){
+    this.distinctArr = {};
     this.noSearchMatched = false;
     this.searchedNamed ='';
     this.isCountBtnClicked = false;
