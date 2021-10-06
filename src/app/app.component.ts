@@ -13,6 +13,6 @@ export class AppComponent {
   }
   navigatToEmployeeTab(){
     this.isRouteChange = true;
-    this.router.navigate(['employee-details']);
+    this.router.navigate(['student-details']);
   }
 }

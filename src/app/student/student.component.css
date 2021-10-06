@@ -1,0 +1,64 @@
+table{
+    width: 97%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.btn-position{
+    text-align: center;
+}
+
+.student-tab-title{
+    text-align: center;
+    font-size: x-large;
+    margin-top: 5px;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.save-btn{
+    margin-top : 15px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+}
+
+.language-field{
+    margin-top: 16px;
+}
+
+.close-dialog-icon{
+    position: sticky;
+    font-size: large;
+    left: 95%;
+    float: right;
+    background: none !important;
+}
+
+.align-center{
+    text-align: center !important;
+}
+
+.task-txt{
+    background: #c2185b;
+    color: var(--apply-filter-button-color) !important;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #808080;
+    padding: 10px;
+    border-radius: 15px;
+    margin-right: 10%;
+    width: 570px;
+    margin-left: 10%;
+}
+
+.save-btn{
+    margin-top: 15px;
+}
+
+.icon-cursor{
+    cursor: pointer;
+}
